@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'description_place.dart';
-import 'review_list.dart';
-import 'gradient_back.dart';
-import 'header_appbar.dart';
+import 'platzi_trips.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,13 +8,11 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  final descriptionDummy = 'El libro mejor vendido de la serie "A Song of Ice and Fire" escrito por George R.R, es llevado a la pantalla chica cuando HBO decide recrear esta historia épica de fantasía. Es la descripción de dos familias poderosas, reyes y reinas, caballeros y renegados, hombres falsos y honestos, haciendo parte de un juego mortal por el control de los Siete Reinados de Westeros y por sentarse en el trono más alto. Martin es el co productor ejecutivo y uno de los escritores de la serie que fue filmada en el Norte de Irlanda y Malta. ';
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Platzi Trips',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -37,20 +32,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Scaffold(
-        // body: new DescriptionPlace('Game of thrones', 4, descriptionDummy) ,
-        body: Stack(
-          children: <Widget>[
-            ListView(
-              children: <Widget>[
-                DescriptionPlace('Game of thrones', 4, descriptionDummy) ,
-                ReviewList()
-              ],
-            ),
-            HeaderAppBar()
-          ],
-        ),
-      )
+      home: PlatziTrips()  // El punto central de la aplicación
       // const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
